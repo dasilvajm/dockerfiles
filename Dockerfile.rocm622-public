@@ -11,8 +11,5 @@ RUN apt install -y ./amdgpu-install_6.2.60202-1_all.deb
 RUN amdgpu-install --usecase=rocm -y && rm amdgpu-install_6.2.60202-1_all.deb
 
 
-#Install MIGraphX from package manager
-#RUN apt install -y migraphx
-
 #Adjust final path for ability to use rocm components
 ENV PATH=$PATH:/opt/rocm/bin/
